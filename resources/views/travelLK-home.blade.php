@@ -1,182 +1,305 @@
 @extends('layout.main')
 @section('content')
 
-<body>
-  <!-- Nepalthinking Slider Begin -->
-<div id="slider2_container" style="position: relative; top: 0px; left: 0px; width:600px;
-        height: 300px;">
+<div class="app-content" id="app-content">
 
-  <!-- Loading Screen -->
-  <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;"> </div>
-    <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;"> </div>
-  </div>
+  <!-- Begining of the slider -->
+  <script src="{{asset('js/home_page_slider/jssor.slider.min.js')}}" type="text/javascript"></script>
+      <script type="text/javascript">
+          jssor_1_slider_init = function() {
 
-  <!-- Slides Container -->
-  <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
-            overflow: hidden;">
-    <div> <a u=image href="#"><img src="{{asset('img/landscape/01.jpg')}}" /></a> </div>
-    <div> <a u=image href="#"><img src="{{asset('img/landscape/02.jpg')}}" /></a> </div>
-    <div> <a u=image href="#"><img src="{{asset('img/landscape/03.jpg')}}" /></a> </div>
-    <div> <a u=image href="#"><img src="{{asset('img/landscape/04.jpg')}}" /></a> </div>
-  </div>
-  <style>
-            .nepalthinkingb01 {
-                position: absolute;
-            }
+              var jssor_1_SlideshowTransitions = [
+                {$Duration:500,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
+                {$Duration:500,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+                {$Duration:1000,x:-0.2,$Delay:40,$Cols:12,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+                {$Duration:2000,y:-1,$Delay:60,$Cols:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
+                {$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}}
+              ];
 
-                .nepalthinkingb01 div, .nepalthinkingb01 div:hover, .nepalthinkingb01 .av {
-                    position: absolute;
-                    width: 12px;
-                    height: 10px;
-                    filter: alpha(opacity=70);
-                    opacity: .7;
-                    overflow: hidden;
-                    cursor: pointer;
-                    border-right: #1800ff 2px solid;
-                }
-
-                .nepalthinkingb01 div {
-                    background-color: red;
-                }
-
-                    .nepalthinkingb01 div:hover, .nepalthinkingb01 .av:hover {
-                        background-color: #d3d3d3;
-                    }
-
-                .nepalthinkingb01 .av {
-                    background-color: #fff;
-                }
-
-                .nepalthinkingb01 .dn, .nepalthinkingb01 .dn:hover {
-                    background-color: #555555;
-                }
-        </style>
-  <div u="navigator" class="nepalthinkingb01" style="bottom: 16px; right: 10px;">
-    <div u="prototype"></div>
-  </div>
-  <style>
-            .nepalthinkinga05l, .nepalthinkinga05r {
-                display: block;
-                position: absolute;
-                width: 40px;
-                height: 40px;
-                cursor: pointer;
-                background: url(images/600x300-arrow.png) no-repeat;
-                overflow: hidden;
-            }
-            .nepalthinkinga05l { background-position: -10px -40px; }
-            .nepalthinkinga05r { background-position: -70px -40px; }
-            .nepalthinkinga05l:hover { background-position: -130px -40px; }
-            .nepalthinkinga05r:hover { background-position: -190px -40px; }
-            .nepalthinkinga05l.nepalthinkinga05ldn { background-position: -250px -40px; }
-            .nepalthinkinga05r.nepalthinkinga05rdn { background-position: -310px -40px; }
-        </style>
-  <!-- Arrow Left -->
-  <span u="arrowleft" class="nepalthinkinga05l" style="top: 123px; left: 8px;"> </span>
-  <!-- Arrow Right -->
-  <span u="arrowright" class="nepalthinkinga05r" style="top: 123px; right: 8px;"> </span> <a style="display: none" href="http://www.nepalthinking.com">Bootstrap Slider</a> </div>
-<!-- Nepalthinking Slider End -->
-
-</body>
-<script>
-        jQuery(document).ready(function ($) {
-            var _SlideshowTransitions = [
-            //Swing Outside in Stairs
-            {$Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $NepalthinkingEasing$.$EaseInWave, $Top: $NepalthinkingEasing$.$EaseInWave, $Clip: $NepalthinkingEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5} }
-
-            //Dodge Dance Outside out Stairs
-            , { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.1, 0.9], $Top: [0.1, 0.9] }, $SlideOut: true, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $NepalthinkingEasing$.$EaseInJump, $Top: $NepalthinkingEasing$.$EaseInJump, $Clip: $NepalthinkingEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5} }
-
-            //Dodge Pet Outside in Stairs
-            , { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $NepalthinkingEasing$.$EaseInWave, $Top: $NepalthinkingEasing$.$EaseInWave, $Clip: $NepalthinkingEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5} }
-
-            //Dodge Dance Outside in Random
-            , { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $NepalthinkingEasing$.$EaseInJump, $Top: $NepalthinkingEasing$.$EaseInJump, $Clip: $NepalthinkingEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5} }
-
-            //Flutter out Wind
-            , { $Duration: 1800, x: 1, y: 0.2, $Delay: 30, $Cols: 10, $Rows: 5, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Reverse: true, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraightStairs, $Assembly: 2050, $Easing: { $Left: $NepalthinkingEasing$.$EaseInOutSine, $Top: $NepalthinkingEasing$.$EaseOutWave, $Clip: $NepalthinkingEasing$.$EaseInOutQuad }, $Outside: true, $Round: { $Top: 1.3} }
-
-            //Collapse Stairs
-            , { $Duration: 1200, $Delay: 30, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraightStairs, $Assembly: 2049, $Easing: $NepalthinkingEasing$.$EaseOutQuad }
-
-            //Collapse Random
-            , { $Duration: 1000, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Easing: $NepalthinkingEasing$.$EaseOutQuad }
-
-            //Vertical Chess Stripe
-            , { $Duration: 1000, y: -1, $Cols: 12, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraight, $ChessMode: { $Column: 12} }
-
-            //Extrude out Stripe
-            , { $Duration: 1000, x: -0.2, $Delay: 40, $Cols: 12, $SlideOut: true, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraight, $Assembly: 260, $Easing: { $Left: $NepalthinkingEasing$.$EaseInOutExpo, $Opacity: $NepalthinkingEasing$.$EaseInOutQuad }, $Opacity: 2, $Outside: true, $Round: { $Top: 0.5} }
-
-            //Dominoes Stripe
-            , { $Duration: 2000, y: -1, $Delay: 60, $Cols: 15, $SlideOut: true, $Formation: $NepalthinkingSlideshowFormations$.$FormationStraight, $Easing: $NepalthinkingEasing$.$EaseOutJump, $Round: { $Top: 1.5} }
-            ];
-
-            var options = {
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
-
-                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
-                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
-                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
-                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
-                    $Class: $NepalthinkingSlideshowRunner$,                 //[Required] Class to create instance of slideshow
-                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
-                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
-                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+              var jssor_1_options = {
+                $AutoPlay: 1,
+                $SlideshowOptions: {
+                  $Class: $JssorSlideshowRunner$,
+                  $Transitions: jssor_1_SlideshowTransitions,
+                  $TransitionsOrder: 1
                 },
-
-                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
-                    $Class: $NepalthinkingBulletNavigator$,                       //[Required] Class to create navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
-                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                    $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                    $SpacingY: 10,                                   //[Optional] Vertical space between each item in pixel, default value is 0
-                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-                },
-
                 $ArrowNavigatorOptions: {
-                    $Class: $NepalthinkingArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                  $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                  $Class: $JssorBulletNavigator$
                 }
-            };
+              };
 
-            var nepalthinking_slider2 = new $NepalthinkingSlider$("slider2_container", options);
+              var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-                var parentWidth = nepalthinking_slider2.$Elmt.parentNode.clientWidth;
-                if (parentWidth)
-                    nepalthinking_slider2.$ScaleWidth(Math.min(parentWidth, 600));
-                else
-                    window.setTimeout(ScaleSlider, 30);
-            }
+              /*#region responsive code begin*/
 
-            ScaleSlider();
+              var MAX_WIDTH = 980;
 
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
+              function ScaleSlider() {
+                  var containerElement = jssor_1_slider.$Elmt.parentNode;
+                  var containerWidth = containerElement.clientWidth;
 
-            //responsive code end
-        });
-    </script>
+                  if (containerWidth) {
 
+                      var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                      jssor_1_slider.$ScaleWidth(expectedWidth);
+                  }
+                  else {
+                      window.setTimeout(ScaleSlider, 30);
+                  }
+              }
+
+              ScaleSlider();
+
+              $Jssor$.$AddEvent(window, "load", ScaleSlider);
+              $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+              $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+              /*#endregion responsive code end*/
+          };
+      </script>
+      <style>
+          /* jssor slider loading skin spin css */
+          .jssorl-009-spin img {
+              animation-name: jssorl-009-spin;
+              animation-duration: 1.6s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+          }
+
+          @keyframes jssorl-009-spin {
+              from {
+                  transform: rotate(0deg);
+              }
+
+              to {
+                  transform: rotate(360deg);
+              }
+          }
+
+
+          .jssorb053 .i {position:absolute;cursor:pointer;}
+          .jssorb053 .i .b {fill:#fff;fill-opacity:0.5;}
+          .jssorb053 .i:hover .b {fill-opacity:.7;}
+          .jssorb053 .iav .b {fill-opacity: 1;}
+          .jssorb053 .i.idn {opacity:.3;}
+
+          .jssora093 {display:block;position:absolute;cursor:pointer;}
+          .jssora093 .c {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
+          .jssora093 .a {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
+          .jssora093:hover {opacity:.8;}
+          .jssora093.jssora093dn {opacity:.6;}
+          .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
+      </style>
+      <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+          <!-- Loading Screen -->
+          <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+              <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="{{asset('svg/home_page_slider/loading/static-svg/spin.svg')}}" />
+          </div>
+          <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+              <div>
+                  <img data-u="image" src="{{asset('img/home_page_slider/gallery/980x380/001.jpg')}}" />
+              </div>
+              <div>
+                  <img data-u="image" src="{{asset('img/home_page_slider/gallery/980x380/002.jpg')}}" />
+              </div>
+              <div>
+                  <img data-u="image" src="{{asset('img/home_page_slider/gallery/980x380/003.jpg')}}" />
+              </div>
+              <div>
+
+                  <img data-u="image" src="{{asset('img/home_page_slider/gallery/980x380/004.jpg')}}" />
+              </div>
+              <div>
+                  <img data-u="image" src="{{asset('img/home_page_slider/gallery/980x380/005.jpg')}}" />
+              </div>
+              <div>
+
+                  <img data-u="image" src="{{asset('img/home_page_slider/gallery/980x380/006.jpg')}}" />
+              </div>
+              <!-- <div style="background-color:#ff7c28;">
+                  <div style="position:absolute;top:50px;left:50px;width:450px;height:62px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:left;padding:5px;box-sizing:border-box;">Photos in this slider are to demostrate jssor slider,<br />
+                      which are not licensed for any other purpose.
+                  </div>
+              </div> -->
+          </div>
+          <!-- Bullet Navigator -->
+          <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+              <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                  <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                      <path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path>
+                  </svg>
+              </div>
+          </div>
+          <!-- Arrow Navigator -->
+          <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+              <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                  <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                  <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                  <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+              </svg>
+          </div>
+          <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+              <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                  <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                  <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                  <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
+              </svg>
+          </div>
+      </div>
+      <script type="text/javascript">jssor_1_slider_init();</script>
+
+      <!-- End of the Slider -->
+      <div class="container" float="left">
+
+    			<div class="row main">
+
+    				<div class="main-login main-center">
+              <div class="blinking-div" id="blinking-div" align="right">
+              <a href="#" class="blinking" id="blinking"><span class="label label-warning"><span class="blink">Click for best deals</span></span></a>
+            </div>
+            <h5>Find Deals for Any Season In Sri Lanka</h5>
+    					<form class="" method="post" action="#">
+
+    						<div class="form-group">
+    							<label for="name" class="cols-sm-2 control-label">Destination</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+    									<input type="text" class="form-control" name="name" id="name"  placeholder="Where are you going?"/>
+    								</div>
+    							</div>
+    						</div>
+
+    						<div class="form-group">
+    							<label for="email" class="cols-sm-2 control-label">Check-In</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+    									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+    								</div>
+    							</div>
+    						</div>
+
+    						<div class="form-group">
+    							<label for="username" class="cols-sm-2 control-label">Check-out</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+    									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+    								</div>
+    							</div>
+    						</div>
+
+    						<div class="form-group">
+    							<label for="password" class="cols-sm-2 control-label">Number of Members</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    									<input type="password" class="form-control" name="password" id="password"  placeholder="No of Adults No of Childs"/>
+    								</div>
+    							</div>
+    						</div>
+
+
+
+    						<div class="form-group ">
+    							<a href="https://deepak646.blogspot.com/" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Search</a>
+    						</div>
+
+    					</form>
+    				</div>
+    			</div>
+    		</div>
+
+<!-- page bottom couresel -->
+
+<div class='row'>
+    <div class='col-md-8 col-md-offset-2'>
+      <div class="carousel slide media-carousel" id="media">
+        <div class="carousel-inner">
+          <div class="item  active">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+      </div>
+    </div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#media').carousel({
+    pause: true,
+    interval: false,
+  });
+});
+
+
+
+</script>
+
+
+
+
+<!-- end page bottom couresel -->
+
+</div>
+<script type="text/javascript">
+
+$(function() {
+
+  blinking($(".blink"));
+
+})($);
+
+function blinking(elm) {
+    timer = setInterval(blink, 500);
+    blink();
+    function blink() {
+        elm.fadeOut(500, function() {
+        elm.fadeIn(500);
+    });
+    }
+}
+
+</script>
 @endsection
