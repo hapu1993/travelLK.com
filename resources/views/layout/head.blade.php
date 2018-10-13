@@ -10,47 +10,193 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
   <!-- it works the same with all jquery version from 1.x to 2.x -->
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/ticker.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<!-- footer css link -->
+<link rel="stylesheet" href="{{asset('css/footer/demo.css')}}">
+	<link rel="stylesheet" href="{{asset('css/footer/footer-distributed-with-address-and-phones.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- search form -->
 
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,600" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{{asset('css/search-form/bootstrap.min.css')}}" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{{asset('css/search-form/style.css')}}" />
+
+
+<!-- end search form -->
+<!-- start home page top destinations links -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/animate.css')}}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/icomoon.css')}}">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/themify-icons.css')}}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/bootstrap.css')}}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/magnific-popup.css')}}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/bootstrap-datepicker.min.css')}}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/owl.theme.default.min.css')}}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{asset('css/home_page_top_destinations/style.css')}}">
+
+	<!-- Modernizr JS -->
+	<script src="{{asset('js/home_page_top_destinations/modernizr-2.6.2.min.js')}}"></script>
+
+
+
+
+<!-- end home page top destinations links -->
+
+<!-- Google Search engine Optimization start -->
+<title>TravellerLK.com | Sri lanka's Best Travel Guide | Online Booking Site</title>
+<meta name="description" content="Sri Lanka's Best Travel Guide.Online Booking Site.Sri Lanka's Largest Travel Site. Search and find the best hotel prices.Find travel ideas for planning your holiday to Sri Lanka." />
+	<meta name="keywords" content="Sri lanka,travellerlk,travellerlk.com,How to travel Sri lanka,Sri lanka Best Travelling Guide,Sri lanka tourism,hotel,  Hotels, lodging, accommodation, special offers, packages, specials, weekend breaks, city breaks, deals, budget, cheap, discount, savings,Sri lanka hotel,Sri lanka Hotels,Sri lanka lodging,Sri lanka accommodation,Sri lanka special offers,Sri lanka packages,Sri lanka specials,Sri lanka weekend breaks,Sri lanka city breaks,Sri lanka deals,Sri lanka budget,Sri lanka cheap,Sri lanka discount,Sri lanka savings,travel sri lanka,sri lanka,sri lanka tourism,sri lanka tour,travel to sri lanka,visit sri lanka,visit sri lanka holidays,trip to srilanka,tourist in sri lanka,sri lanka travel and tours,lanka holidays,tours in sri lanka,travel and tours,about sri lanka,travel websites,srilankan,srilanka,sri lanka tourist board,Hotelsflights,Resorts,Locations,cheap flights,low cost,online booking,luxury hotels,beach hotels,air tickets,resort and spa,5 star hotels,zoo,Sri Lanka Tourism,sri lanka turismo,Sri Lanka turismo,Шри-Ланка туризма,Srí Lanka cestovního ruchu,Шры-Ланка турызму,Sri Lanka matkailu,Σρι Λάνκα τουρισμού,스리랑카 관광,スリランカ観光,luxury holidays, luxury holidays in asia, holiday cottages, luxury beach holidays, holiday plans, holiday planning, holiday plans asia, holiday plans sri lanka, Asian Holiday destinations, Best Destinations, wonderful destinations, popular destinations,sri lanka vacation,sri lanka tourism,sri lanka honeymoon,Sri Lanka Hotels,sri lanka resorts,sri lanka tourist attractions,sri lankan airlines,srilanka tour packages,Colombo,Kandy,Negambo,Galle,Unawatuna,Hikkaduwa,NuweraEliya,Tangalle,Bentota,Arugambay,Kalpitiya,Mirissa,Passikudah,travel agents,cheap hotels in sri lanka,flights to sri lanka,sri lanka beach,cheap tickets to sri lanka,hotels in Colombo,european holidays,last minute holidays,asia vacation packages,asia tour packages,tour of asia,asia travel deals,trips to asia,cheap asia flights,travel in asia" />
+
+
+<meta property="og:title" content="TravellerLK.com | Sri lanka's Best Travel Guide | Online Booking Site"/>
+	<meta property="og:image" content="{{asset('img/seo_image.jpg')}}"/>
+	<meta property="og:url" content="www.travellerlk.com"/>
+	<meta property="og:site_name" content="TravellerLK"/>
+	<meta property="og:description" content="Sri Lanka's Best Travel Guide.Online Booking Site.Sri Lanka's Largest Travel Site. Search and find the best hotel prices.Find travel ideas for planning your holiday to Sri Lanka."/>
+	<meta name="twitter:title" content="TravellerLK.com | Sri lanka's Best Travel Guide | Online Booking Site" />
+	<meta name="twitter:image" content="{{asset('img/seo_image.jpg')}}" />
+	<meta name="twitter:url" content="www.travellerlk.com" />
+	<meta name="twitter:card" content="" />
+
+
+
+<!-- Google Search engine Optimization end -->
   @yield('head')
 
-  <title>Home | TravelLK.com</title>
+
 
 <style>
-/* home page form styles */
-/*
-/* Created by Filipe Pina
- * Specific styles of signin, register, component
- */
-/*
- * General styles
- */
-#playground-container {
-    height: 500px;
-    overflow: hidden !important;
-    -webkit-overflow-scrolling: touch;
-}
+
 body, html{
-     height: 100%;
+
+  height: 100%;
  	background-repeat: no-repeat;
- 	/* background:url(https://i.ytimg.com/vi/4kfXjatgeEU/maxresdefault.jpg); */
- 	font-family: 'Oxygen', sans-serif;
-	    background-size: cover;
-      background-color: #e7edee;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  background-size: cover;
+  background-color: #e7edee;
+  width: 100%;
+}
+@media screen and (max-width: 768px){
+.destination-title p{
+  font-family: 'Poppins';
+  font-size: 15px;
+  color: #243021;
+}
+}
+@media screen and (min-width: 768px){
+  .destination-title p{
+    font-family: 'Poppins';
+    font-size: 25px;
+    color: #243021;
+  }
+}
+@media screen and (max-width: 768px){
+.home-content{
+  margin-top:7%;
+}
+}
+
+@media screen and (min-width: 600px){
+
+.home-content{
+  margin-top:58%;
+}
+}
+@media screen and (min-width: 769px){
+
+.home-content{
+  margin-top:3%;
+}
+}
+@media screen and (max-width: 768px){
+.home-search-bar p
+{
+font-family: 'Poppins';
+color:#fff;
+font-size: 25px;
+}
+}
+@media screen and (min-width: 768px){
+.home-search-bar p
+{
+
+font-family: 'Poppins';
+color:#fff;
+font-size: 40px;
+}
+}
+@media screen and (max-width: 768px){
+.home-search-bar{
+  height: 918px;
+  background-image:url({{url('img/03.jpg')}});
+background-repeat: no-repeat;
+  font-family: 'Poppins';font-size: 25px;
+  color:#fff;
+  width:100%
+}
+
+}
+@media screen and (min-width: 600px){
+  .home-search-bar{
+  height: 600px;
+  background-image:url({{url('img/04.jpg')}});
+  background-repeat: no-repeat;
+  font-family: 'Poppins';
+  color:#fff;
+}
+
+}
+
+
+@media screen and (min-width: 769px){
+  .home-search-bar{
+  height: 450px;
+  background-image:url({{url('img/Experience1.jpg')}});
+  background-repeat: no-repeat;
+  font-family: 'Poppins';
+  color:#fff;
+}
+
 }
 
 
 /* home page app-content */
 .app-content{
+  border: 1px solid #8ac5cc;
+    border-radius: 5px;
   	margin-top: 5px;
   background-color: #ffffff;
   position: relative;
 width: 70%;
-position: absolute;
+/* position: absolute; */
 left: 15%;
+height: 800px;
 }
 @media screen and (max-width: 768px){
 .app-content{
@@ -59,116 +205,21 @@ left: 15%;
   position: relative;
   width:100%;
   left: 0%;
+  height: 1700px;
 }
 }
 
 /* end home page app-content */
 
-.main{
- 	margin:50px 15px;
-}
 
-h1.title {
-	font-size: 50px;
-	font-family: 'Passion One', cursive;
-	font-weight: 400;
-}
-
-hr{
-	width: 10%;
-	color: #fff;
-}
-
-.form-group{
-	margin-bottom: 15px;
-}
-
-label{
-	margin-bottom: 15px;
-}
-
-input,
-input::-webkit-input-placeholder {
-    font-size: 11px;
-    padding-top: 3px;
-}
-
-.main-login{
- 	background-color: #fff;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-
-}
-.form-control {
-    height: auto!important;
-padding: 8px 12px !important;
-}
-.input-group {
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
-}
-#button {
-    border: 1px solid #ccc;
-    margin-top: 28px;
-    padding: 6px 12px;
-    color: #666;
-    text-shadow: 0 1px #fff;
-    cursor: pointer;
-    -moz-border-radius: 3px 3px;
-    -webkit-border-radius: 3px 3px;
-    border-radius: 3px 3px;
-    -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
-    -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
-    box-shadow: 0 1px #fff inset, 0 1px #ddd;
-    background: #f5f5f5;
-    background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
-    background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-    background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-    background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-    background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
-}
-.main-center{
- 	margin-top: 30px;
- 	margin: 0 auto;
- 	max-width: 400px;
-    padding: 10px 40px;
-	background:#009edf;
-	    color: #FFF;
-    text-shadow: none;
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
--moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
-
-}
-span.input-group-addon i {
-    color: #009edf;
-    font-size: 17px;
-}
-
-.login-button{
-	margin-top: 5px;
-}
-
-.login-register{
-	font-size: 11px;
-	text-align: center;
-}
-
-/* end home page form styles */
 
 /* begining nav bar styles */
 
 .topnav {
   overflow: hidden;
-  background-color: #2c2932;
+  background-color: #4abd17;
+  background: linear-gradient(#60a760,#487548);
+  box-shadow: 0 3px #d5e1e6;
 
 }
 .blinking{
@@ -182,7 +233,8 @@ span.input-group-addon i {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
+  font-family: 'Poppins';
 }
 
 .topnav a:hover {
@@ -229,7 +281,7 @@ span.input-group-addon i {
 {
   margin-bottom: 0;
   padding: 0 40px 30px 40px;
-  margin-top: 30px;
+  margin-top: 250px;
 
 }
 
@@ -281,10 +333,38 @@ span.input-group-addon i {
 }
 /* end page bottom couresel */
 
+/* start home page side ad slot */
+.homepage-side-adslot{
+  background-color: black;
+  height: 600px;
+  width: 160px;
+  float: right;
+  position: relative;
+}
+@media screen and (max-width: 768px){
+.homepage-side-adslot{
+display: none;
+
+}
+}
+.homepage-side-adslot-left{
+  background-color: black;
+  height: 600px;
+  width: 160px;
+  float: left;
+  position: absolute;
+}
+@media screen and (max-width: 768px){
+.homepage-side-adslot-left{
+display: none;
+
+}
+}
+
+@yield('style')
 
 
 
-        @yield('style')
     </style>
 
 
